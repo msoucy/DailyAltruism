@@ -24,5 +24,5 @@ if __name__ == '__main__':
     deed = choice(deeds)
     text = "Today's good deed: " + deed
     print("Tooting:", text)
-    # masto.status_post(text)
+    masto.status_post(text)
 
