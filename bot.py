@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from mastodon import Mastodon
 from random import choice
+from pprint import pprint
 import os
 
 masto = Mastodon(
@@ -24,5 +25,7 @@ if __name__ == '__main__':
     deed = choice(deeds)
     text = "Today's good deed: " + deed
     print("Tooting:", text)
-    masto.status_post(text)
+    status_result = masto.status_post(text)
+    with open("deeds.log", "a") as of:
+        pprint(status_result, stream=of)
 
