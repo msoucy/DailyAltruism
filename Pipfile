@@ -7,6 +7,3 @@ name = "pypi"
 
 [packages]
 "mastodon.py" = "*"
-
-[requires]
-python_version = "3.9"
